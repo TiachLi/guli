@@ -1,0 +1,12 @@
+com\atguigu\educenter\entity\ordervo\UcenterMemberOrder.class
+com\atguigu\educenter\service\UcenterMemberService.class
+com\atguigu\educenter\entity\UcenterMember.class
+com\atguigu\educenter\entity\vo\RegisterVo.class
+com\atguigu\educenter\utils\MD5.class
+com\atguigu\educenter\mapper\UcenterMemberMapper.class
+com\atguigu\educenter\controller\UcenterMemberController.class
+com\atguigu\educenter\entity\vo\LoginVo.class
+com\atguigu\educenter\config\MyAMQPConfig.class
+com\atguigu\educenter\entity\ordervo\CourseWebVoOrder.class
+com\atguigu\educenter\service\impl\UcenterMemberServiceImpl.class
+com\atguigu\educenter\UcenterApplication.class

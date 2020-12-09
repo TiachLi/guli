@@ -1,0 +1,5 @@
+com\atguigu\gateway\ApiGatewayApplication.class
+com\atguigu\gateway\handler\JsonExceptionHandler.class
+com\atguigu\gateway\config\CorsConfig.class
+com\atguigu\gateway\handler\ErrorHandlerConfig.class
+com\atguigu\gateway\filter\AuthGlobalFilter.class

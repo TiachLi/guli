@@ -1,0 +1,7 @@
+com\atguigu\vod\Utils\ConstantVodUtils.class
+com\atguigu\vod\Utils\InitVodClient.class
+com\atguigu\vod\VodApplication.class
+com\atguigu\vod\config\MyAMQPConfig.class
+com\atguigu\vod\controller\VodController.class
+com\atguigu\vod\service\VodService.class
+com\atguigu\vod\service\impl\VodServiceImpl.class

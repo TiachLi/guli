@@ -1,0 +1,5 @@
+C:\IDEAProject\guli_parent\infrastructure\service_gateway\src\main\java\com\atguigu\gateway\ApiGatewayApplication.java
+C:\IDEAProject\guli_parent\infrastructure\service_gateway\src\main\java\com\atguigu\gateway\filter\AuthGlobalFilter.java
+C:\IDEAProject\guli_parent\infrastructure\service_gateway\src\main\java\com\atguigu\gateway\handler\JsonExceptionHandler.java
+C:\IDEAProject\guli_parent\infrastructure\service_gateway\src\main\java\com\atguigu\gateway\handler\ErrorHandlerConfig.java
+C:\IDEAProject\guli_parent\infrastructure\service_gateway\src\main\java\com\atguigu\gateway\config\CorsConfig.java

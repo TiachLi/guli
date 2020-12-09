@@ -1,0 +1,12 @@
+com\atguigu\rmqservice\AmqApplication.class
+com\atguigu\rmqservice\entity\vo\LoginVo.class
+com\atguigu\rmqservice\entity\vo\RegisterVo.class
+com\atguigu\rmqservice\service\impl\VideoNumServiceImpl.class
+com\atguigu\rmqservice\client\EduClient.class
+com\atguigu\rmqservice\client\UcenterClinet.class
+com\atguigu\rmqservice\config\MyAMQPConfig.class
+com\atguigu\rmqservice\controller\UcenterMemberController.class
+com\atguigu\rmqservice\entity\UcenterMember.class
+com\atguigu\rmqservice\service\impl\UcenterMemberServiceImpl.class
+com\atguigu\rmqservice\service\UcenterMemberService.class
+com\atguigu\rmqservice\service\VideoNumService.class

@@ -1,0 +1,5 @@
+com\atguigu\oss\controller\OssController.class
+com\atguigu\oss\service\OssService.class
+com\atguigu\oss\utils\ConstantPropertiesUtils.class
+com\atguigu\oss\service\impl\OssServiceImpl.class
+com\atguigu\oss\OssApplication.class
