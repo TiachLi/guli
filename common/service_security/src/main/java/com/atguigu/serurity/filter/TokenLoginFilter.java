@@ -62,9 +62,7 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
         SecurityUser user = (SecurityUser) auth.getPrincipal();
         String token = tokenManager.createToken(user.getCurrentUserInfo().getUsername());
         //redisTemplate.opsForValue().set(user.getCurrentUserInfo().getUsername(), user.getPermissionValueList());
-        System.out.println("登录的用户"+user);
         List<String> userPermissionValueList = user.getPermissionValueList();
-        System.out.println("登录的用户"+userPermissionValueList);
         if (userPermissionValueList !=null&&userPermissionValueList.size()>0){
             redisTemplate.opsForList().leftPushAll(user.getCurrentUserInfo().getUsername(), userPermissionValueList);
         }

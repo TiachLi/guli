@@ -190,9 +190,6 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
                 .flatMap(Collection::stream)
                 .distinct()
                 .collect(Collectors.toList());
-        System.out.println(oldRolePermissionList);
-        System.out.println(newRolePermissionList);
-        System.out.println(finalList);
         //添加到角色菜单关系表
         rolePermissionService.saveBatch(finalList);
     }

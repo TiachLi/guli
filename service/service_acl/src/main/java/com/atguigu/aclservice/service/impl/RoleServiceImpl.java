@@ -70,7 +70,6 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements Ro
             UserRole userRole = new UserRole();
             userRole.setUserId(userId);
             userRole.setRoleId(roleId);
-
             userRoleList.add(userRole);
         }
         userRoleService.saveBatch(userRoleList);

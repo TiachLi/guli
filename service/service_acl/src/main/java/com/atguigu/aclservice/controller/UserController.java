@@ -68,7 +68,8 @@ public class UserController {
     @ApiOperation(value = "修改管理用户")
     @PostMapping("update")
     public R updateById(@RequestBody User user) {
-        System.out.println(user);
+        String encrypt = MD5.encrypt(user.getPassword());
+        user.setPassword(encrypt);
         userService.updateById(user);
         return R.ok();
     }

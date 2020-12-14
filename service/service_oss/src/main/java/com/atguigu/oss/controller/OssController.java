@@ -19,12 +19,12 @@ public class OssController {
             String url = ossService.uploadFileAvatar(file);
             return R.ok().data("url",url);
     }
-    //上传文件的方法
+    //删除文件的方法
     @DeleteMapping
     public R deleteOssFile(String url) {
 
         String fileName =url.substring(url.lastIndexOf("/cover/")+7);
-       // ossService.deleteFileAvatar(fileName);
+       ossService.deleteFileAvatar(fileName);
         System.out.println(fileName);
         return R.ok();
     }

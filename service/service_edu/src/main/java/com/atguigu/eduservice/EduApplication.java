@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableFeignClients
 @EnableDiscoveryClient
 @EnableTransactionManagement
+@MapperScan("com.atguigu.eduservice.mapper")
 public class EduApplication {
 
     public static void main(String[] args) {

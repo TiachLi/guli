@@ -1,4 +1,4 @@
-package com.atguigu.eduservice.controller;
+package com.atguigu.eduservice.controller.admin;
 
 
 import com.alibaba.excel.exception.ExcelCommonException;

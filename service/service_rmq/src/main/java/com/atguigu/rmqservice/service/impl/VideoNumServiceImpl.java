@@ -8,15 +8,14 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 @Service
-public class VideoNumServiceImpl implements VideoNumService {
+public class VideoNumServiceImpl implements VideoNumService{
 
     @Resource
     EduClient eduClient;
 
-    @Override
+
     @RabbitListener(queues = "videoNum.news")
     public void addVideoPlayCount(String videoSourceId) {
-        System.out.println("videoNum.news 接收到消息");
         eduClient.addVideoPlayCount(videoSourceId);
     }
 }

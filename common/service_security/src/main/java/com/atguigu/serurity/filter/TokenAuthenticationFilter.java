@@ -70,9 +70,7 @@ public class TokenAuthenticationFilter extends BasicAuthenticationFilter {
             String userName = tokenManager.getUserFromToken(token);
 
             //List<String> permissionValueList = (List<String>) redisTemplate.opsForValue().get(userName);
-            System.out.println("是这一行报错吗");
             List<String> permissionValueList = (List<String>)redisTemplate.opsForList().range(userName, 0, -1);
-            System.out.println("不是");
             Collection<GrantedAuthority> authorities = new ArrayList<>();
             for(String permissionValue : permissionValueList) {
                 if(StringUtils.isEmpty(permissionValue)) continue;

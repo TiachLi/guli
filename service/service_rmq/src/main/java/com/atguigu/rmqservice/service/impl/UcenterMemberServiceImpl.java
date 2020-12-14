@@ -30,10 +30,9 @@ public class UcenterMemberServiceImpl implements UcenterMemberService {
         //数据添加数据库中
         ucenterClinet.registerUserToDataSource(registerVo);
     }
-
+    //从消息队列中接收手机号登录的数据
     @RabbitListener(queues = "loginNum.news")
     public void updateLoginTime(String mobile){
-        System.out.println("loginNum.news 接收到消息");
         ucenterClinet.updateLoginTime(mobile);
     }
 }

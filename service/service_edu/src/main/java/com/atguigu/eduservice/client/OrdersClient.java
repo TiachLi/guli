@@ -6,8 +6,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@Component
+
 @FeignClient(name = "service-order",fallback = OrdersClientFallBack.class)
+@Component
 public interface OrdersClient {
 
     //根据课程id和用户id查询订单表中订单状态

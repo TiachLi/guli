@@ -28,7 +28,6 @@ com\atguigu\eduservice\entity\coursevo\CoursePublishVo.class
 com\atguigu\eduservice\service\impl\EduCommentServiceImpl.class
 com\atguigu\eduservice\controller\front\IndexFrontController.class
 com\atguigu\eduservice\mapper\EduTeacherMapper.class
-com\atguigu\eduservice\config\EduConfig.class
 com\atguigu\eduservice\controller\front\TeacherFrontController.class
 com\atguigu\eduservice\service\EduSubjectService.class
 com\atguigu\eduservice\entity\frontvo\CourseFrontVo.class

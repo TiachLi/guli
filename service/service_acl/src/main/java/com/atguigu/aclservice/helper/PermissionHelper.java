@@ -29,7 +29,7 @@ public class PermissionHelper {
         for(Permission permissionNode : permissionList) {
             //得到菜单 pid=1菜单
             if("0".equals(permissionNode.getPid())) {
-                //设置顶层菜单的level是1
+                //设置顶层菜单的level是0
                 permissionNode.setLevel(0);
                 //根据顶层菜单，向里面进行查询子菜单，封装到finalNode里面
                 finalNode.add(selectChildren(permissionNode,permissionList));

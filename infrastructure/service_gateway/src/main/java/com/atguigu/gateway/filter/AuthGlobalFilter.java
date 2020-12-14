@@ -1,6 +1,8 @@
 package com.atguigu.gateway.filter;
 
+import com.atguigu.commonutils.JwtUtils;
 import com.google.gson.JsonObject;
+import com.sun.org.apache.xalan.internal.xsltc.dom.SortingIterator;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
@@ -44,6 +46,23 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
                     ServerHttpResponse response = exchange.getResponse();
                     return out(response);
 //                }
+            }
+        }
+        //谷粒学院api接口，校验用户必须登录
+        if(antPathMatcher.match("/**/**/showData/**", path)) {
+            List<String> tokenList = request.getHeaders().get("token");
+            System.out.println(tokenList);
+            if(null == tokenList) {
+                ServerHttpResponse response = exchange.getResponse();
+                return out(response);
+            } else {
+                System.out.println(tokenList.get(0));
+                Boolean isCheck = JwtUtils.checkToken(tokenList.get(0));
+                System.out.println(isCheck);
+                if(!isCheck) {
+                ServerHttpResponse response = exchange.getResponse();
+                return out(response);
+                }
             }
         }
         //内部服务接口，不允许外部访问
