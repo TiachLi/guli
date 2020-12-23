@@ -45,7 +45,7 @@ public class CodeServiceImpl implements CodeService {
         //产生4个随机验证码，12Ey
         String checkCode = RandomUtil.getFourBitRandom();
         //设置画笔颜色为黄色
-        g.setColor(Color.YELLOW);
+        g.setColor(Color.LIGHT_GRAY);
         //设置字体的小大
         g.setFont(new Font("黑体",Font.BOLD,24));
         //向图片上写入验证码

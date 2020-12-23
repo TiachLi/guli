@@ -64,7 +64,9 @@ public class CourseFrontController {
     public CourseWebVoOrder getCourseInfoOrder(@PathVariable String id) {
         CourseWebVo courseInfo = courseService.getBaseCourseInfo(id);
         CourseWebVoOrder courseWebVoOrder = new CourseWebVoOrder();
-        BeanUtils.copyProperties(courseInfo,courseWebVoOrder);
+        if(courseInfo!=null){
+            BeanUtils.copyProperties(courseInfo,courseWebVoOrder);
+        }
         return courseWebVoOrder;
     }
 }

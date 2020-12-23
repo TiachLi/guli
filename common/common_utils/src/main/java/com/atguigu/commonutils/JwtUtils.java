@@ -19,7 +19,6 @@ public class JwtUtils {
     //常量
     public static final long EXPIRE = 1000 * 60 * 60 * 24; //token过期时间
     public static final String APP_SECRET = "ukc8BDbRigUDaY6pZFfWus2jZWLPHO"; //秘钥
-
     //生成token字符串的方法
     public static String getJwtToken(String id, String nickname){
 
@@ -39,11 +38,8 @@ public class JwtUtils {
 
         return JwtToken;
     }
-
     /**
      * 判断token是否存在与有效
-     * @param jwtToken
-     * @return
      */
     public static boolean checkToken(String jwtToken) {
         if(StringUtils.isEmpty(jwtToken)) return false;
@@ -58,8 +54,6 @@ public class JwtUtils {
 
     /**
      * 判断token是否存在与有效
-     * @param request
-     * @return
      */
     public static boolean checkToken(HttpServletRequest request) {
         try {
@@ -75,14 +69,13 @@ public class JwtUtils {
 
     /**
      * 根据token字符串获取会员id
-     * @param request
-     * @return
      */
     public static String getMemberIdByJwtToken(HttpServletRequest request) {
         String jwtToken = request.getHeader("token");
         if(StringUtils.isEmpty(jwtToken)) return "";
         Jws<Claims> claimsJws = Jwts.parser().setSigningKey(APP_SECRET).parseClaimsJws(jwtToken);
         Claims claims = claimsJws.getBody();
+
         return (String)claims.get("id");
     }
 }

@@ -95,7 +95,7 @@ public class UcenterMemberController {
         Integer count = memberService.countRegisterDay(day);
         return R.ok().data("countRegister",count);
     }
-    //查询某一天注册人数
+    //查询某一天登录人数
     @GetMapping("countLogin/{day}")
     public Integer countLogin(@PathVariable String day) {
         return   memberService.countLoginDay(day);

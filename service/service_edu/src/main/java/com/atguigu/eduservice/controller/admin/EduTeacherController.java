@@ -40,8 +40,8 @@ public class EduTeacherController {
         return R.ok().data("items",eduTeachers);
     }
 
-    @DeleteMapping("{id}")
     @ApiOperation("删除讲师")
+    @DeleteMapping("{id}")
     public R deleteById( @ApiParam(name = "id", value = "讲师ID", required = true) @PathVariable String id){
         boolean isDeleted = eduTeacherService.removeById(id);
         if (isDeleted){
@@ -59,21 +59,12 @@ public class EduTeacherController {
                              @PathVariable long limit) {
         //创建page对象
         Page<EduTeacher> pageTeacher = new Page<>(current,limit);
-
         //int i = 10/0;
-
         //调用方法实现分页
         //调用方法时候，底层封装，把分页所有数据封装到pageTeacher对象里面
         eduTeacherService.page(pageTeacher,null);
-
         long total = pageTeacher.getTotal();//总记录数
         List<EduTeacher> records = pageTeacher.getRecords(); //数据list集合
-
-//        Map map = new HashMap();
-//        map.put("total",total);
-//        map.put("rows",records);
-//        return R.ok().data(map);
-
         return R.ok().data("total",total).data("rows",records);
     }
     //4 条件查询带分页的方法

@@ -76,7 +76,6 @@ public class EduCourseController {
         Map<String, Object> resultMap = courseService.getListByCondition(currentInt,limitInt,courseVo);
         long total = (long)resultMap.get("total");
         Object list =resultMap.get("list");
-
         return R.ok().data("list",list).data("total",total);
     }
 

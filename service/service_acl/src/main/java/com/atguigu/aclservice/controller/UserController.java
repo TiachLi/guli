@@ -106,7 +106,6 @@ public class UserController {
     @GetMapping("/get/{userId}")
     public R getUser(@PathVariable String userId) {
         User userServiceById = userService.getById(userId);
-        userServiceById.getPassword();
         return R.ok().data("item",userServiceById);
     }
 }

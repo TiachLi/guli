@@ -64,14 +64,14 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
             throw new GuliException(20001,"添加课程信息失败");
         }
 
-        //获取添加之后课程id
+        //获取添加之后获取课程id
         String cid = eduCourse.getId();
 
         //2 向课程简介表添加课程简介
         //edu_course_description
         EduCourseDescription courseDescription = new EduCourseDescription();
         courseDescription.setDescription(courseInfoVo.getDescription());
-        //设置描述id就是课程id
+        //设置课程简介id就是课程id
         courseDescription.setId(cid);
         courseDescriptionService.save(courseDescription);
 

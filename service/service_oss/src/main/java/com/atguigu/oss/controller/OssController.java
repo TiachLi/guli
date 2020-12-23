@@ -24,7 +24,7 @@ public class OssController {
     public R deleteOssFile(String url) {
 
         String fileName =url.substring(url.lastIndexOf("/cover/")+7);
-       ossService.deleteFileAvatar(fileName);
+        ossService.deleteFileAvatar(fileName);
         System.out.println(fileName);
         return R.ok();
     }

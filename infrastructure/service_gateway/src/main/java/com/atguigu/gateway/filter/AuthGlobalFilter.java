@@ -56,9 +56,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
                 ServerHttpResponse response = exchange.getResponse();
                 return out(response);
             } else {
-                System.out.println(tokenList.get(0));
                 Boolean isCheck = JwtUtils.checkToken(tokenList.get(0));
-                System.out.println(isCheck);
                 if(!isCheck) {
                 ServerHttpResponse response = exchange.getResponse();
                 return out(response);

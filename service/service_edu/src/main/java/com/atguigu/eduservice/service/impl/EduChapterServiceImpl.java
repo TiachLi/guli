@@ -66,6 +66,7 @@ public class EduChapterServiceImpl extends ServiceImpl<EduChapterMapper, EduChap
                 eduVideos.add(videoVo);
             }
         }
+        //遍历所有章节从hashMap中取出章节id对应的小节
         for (EduChapter eduChapter : eduChapters) {
             ChapterVo chapterVo = new ChapterVo();
             BeanUtils.copyProperties(eduChapter,chapterVo);

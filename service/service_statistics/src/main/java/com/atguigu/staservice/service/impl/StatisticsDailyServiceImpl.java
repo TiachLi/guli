@@ -84,7 +84,7 @@ public class StatisticsDailyServiceImpl extends ServiceImpl<StatisticsDailyMappe
             //StatisticsDaily daily = staList.get(i);
             //封装日期list集合
             date_calculatedList.add(daily.getDateCalculated());
-            //封装对应数量
+            //封装对应数据
             switch (type) {
                 case "login_num":
                     numDataList.add(daily.getLoginNum());

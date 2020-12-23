@@ -124,8 +124,6 @@ public class EduVideoServiceImpl extends ServiceImpl<EduVideoMapper, EduVideo> i
     //增加视频播放量
     @Override
     public void addVideoPlayCount(String videoSourceId) {
-
-        System.out.println(new Date());
         baseMapper.addVideoPlayCount(videoSourceId,new Date());
     }
     //视频播放总量
