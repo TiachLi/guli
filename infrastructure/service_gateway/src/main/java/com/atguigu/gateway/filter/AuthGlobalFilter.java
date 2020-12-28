@@ -48,10 +48,10 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
 //                }
             }
         }
-        //谷粒学院api接口，校验用户必须登录
+        //统计数据接口，校验用户必须登录
         if(antPathMatcher.match("/**/**/showData/**", path)) {
             List<String> tokenList = request.getHeaders().get("token");
-            System.out.println(tokenList);
+
             if(null == tokenList) {
                 ServerHttpResponse response = exchange.getResponse();
                 return out(response);
